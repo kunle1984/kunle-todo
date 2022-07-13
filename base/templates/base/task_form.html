@@ -1,0 +1,20 @@
+{% extends 'base/main.html' %}
+{% block title%} Create Task{%endblock%}
+{% block page%}Create Task{%endblock%}
+
+{% block content %}
+
+
+<div style="margin-left:50px;">
+<form method="POST" action="">
+     {% csrf_token %}
+{{form.as_p}}
+</div>
+{%endblock content%}
+
+{%block add%}
+<div class="widget-content-right">
+<a class="btn btn-primary"   href='{% url 'tasks'%}'><i class="fa fa-arrow-left"></i></a>  <input a class="btn btn-primary" type="submit" value="Submit">
+
+    {%endblock%}
+</div></form>
